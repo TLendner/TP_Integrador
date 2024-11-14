@@ -13,15 +13,17 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="img/logo.png" alt="Green Gains Logo">
+                <img src="~/img/logo.png" alt="Green Gains Logo">
             </div>
             <nav class="nav-links">
                 <a href="/">Home</a>
-                <a href="Informacion">Información</a>
-                <a href="Tienda">Tienda</a>
+                <a href="#">Información</a>
+                <a href="@Url.Action("Tienda","Home")">Tienda</a>
             </nav>
-            <div class="profile-icon">👤</div>
-        </div>
+            <div class="profile-icon">
+                <a href="@Url.Action("Perfil", "Home")">👤</a>
+            </div>
+
     </header>
 
     <main role="main">
@@ -37,7 +39,7 @@
         <nav class="footer-nav">
             <a href="/">Home</a>
             <a href="/informacion">Información</a>
-            <a href="/tienda">Tienda</a>
+            <a href="@Url.Action("Tienda","Home")">Tienda</a>
         </nav>
         <p>&copy; Green Gains 2024</p>
     </footer>

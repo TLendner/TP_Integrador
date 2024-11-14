@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\david\\Desktop\\Integrador\\TP_Integrador\\Integrador\\wwwroot\\img\\puntos.png",
+      "PackagePath": "staticwebassets\\img\\puntos.png"
+    },
+    {
       "Id": "C:\\Users\\david\\Desktop\\Integrador\\TP_Integrador\\Integrador\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

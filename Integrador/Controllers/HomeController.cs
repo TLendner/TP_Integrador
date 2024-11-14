@@ -17,4 +17,13 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Tienda()
+    {
+        return View();
+    }
+    
+    public IActionResult Perfil()
+    {
+        return View();
+    }
 }

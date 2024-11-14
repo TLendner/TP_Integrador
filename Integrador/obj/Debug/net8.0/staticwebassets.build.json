@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rX4NY4VQkKnDbS/GQyJiKVbnYtu6JcaTcprKpgjyA0Q=",
+  "Hash": "fhpjtTg34/oj/pLcMkAiHu6vcSGJWuKVMq3fJxIF+Q8=",
   "Source": "Integrador",
   "BasePath": "_content/Integrador",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\david\\Desktop\\Integrador\\TP_Integrador\\Integrador\\wwwroot\\img\\puntos.png",
+      "SourceId": "Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\david\\Desktop\\Integrador\\TP_Integrador\\Integrador\\wwwroot\\",
+      "BasePath": "_content/Integrador",
+      "RelativePath": "img/puntos.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\puntos.png"
     },
     {
       "Identity": "C:\\Users\\david\\Desktop\\Integrador\\TP_Integrador\\Integrador\\wwwroot\\js\\site.js",
