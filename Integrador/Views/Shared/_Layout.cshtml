@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]Green Gains</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Meera+Inimai&display=swap" rel="stylesheet">
 </head>
 
@@ -18,10 +18,10 @@
             <nav class="nav-links">
                 <a href="/">Home</a>
                 <a href="#">Información</a>
-                <a href="@Url.Action("Tienda","Home")">Tienda</a>
+                <a href='@Url.Action("Tienda","Home")'>Tienda</a>
             </nav>
             <div class="profile-icon">
-                <a href="@Url.Action("Perfil", "Home")">👤</a>
+                <a href='@Url.Action("Login","Account")'>👤</a>    
             </div>
 
     </header>
@@ -39,7 +39,7 @@
         <nav class="footer-nav">
             <a href="/">Home</a>
             <a href="/informacion">Información</a>
-            <a href="@Url.Action("Tienda","Home")">Tienda</a>
+            <a href='@Url.Action("Tienda","Home")'>Tienda</a>
         </nav>
         <p>&copy; Green Gains 2024</p>
     </footer>
