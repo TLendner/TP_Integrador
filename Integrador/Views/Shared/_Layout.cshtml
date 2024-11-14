@@ -4,13 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - NombreProyecto</title>
+    <title>@ViewData["Title"]Green Gains</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Meera+Inimai&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        NombreProyecto
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Green Gains Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="Informacion">Información</a>
+                <a href="Tienda">Tienda</a>
+            </nav>
+            <div class="profile-icon">👤</div>
+        </div>
     </header>
 
     <main role="main">
@@ -18,7 +29,17 @@
     </main>
 
     <footer>
-        &copy; @DateTime.Now.Year - NombreProyecto
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Email</a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/informacion">Información</a>
+            <a href="/tienda">Tienda</a>
+        </nav>
+        <p>&copy; Green Gains 2024</p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
