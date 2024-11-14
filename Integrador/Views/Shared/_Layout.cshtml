@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Green Gains</title>
-    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <title>Green Gains</title>
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Meera+Inimai&display=swap" rel="stylesheet">
 </head>
 
@@ -13,17 +13,25 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="~/img/logo.png" alt="Green Gains Logo">
+            <a href='@Url.Action("Index","Home")'><img src="~/img/logo.png" alt="Green Gains Logo"></a>
+
             </div>
             <nav class="nav-links">
                 <a href="/">Home</a>
-                <a href="#">Información</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Información</a>
+                    <div class="dropdown-content">
+                        <a href='@Url.Action("Mapa","Home")'>Tachos verdes</a>
+                        <a href='@Url.Action("Chat","Home")'>Chat AI</a>
+                    </div>
+                </div>
+
                 <a href='@Url.Action("Tienda","Home")'>Tienda</a>
             </nav>
             <div class="profile-icon">
-                <a href='@Url.Action("Login","Account")'>👤</a>    
+                <a href='@Url.Action("Login","Account")'>👤</a>
             </div>
-
+        </div>
     </header>
 
     <main role="main">
@@ -38,7 +46,8 @@
         </div>
         <nav class="footer-nav">
             <a href="/">Home</a>
-            <a href="/informacion">Información</a>
+            <a href='@Url.Action("Mapa","Home")'>Tachos verdes</a>
+            <a href='@Url.Action("Chat","Home")'>Chat AI</a>
             <a href='@Url.Action("Tienda","Home")'>Tienda</a>
         </nav>
         <p>&copy; Green Gains 2024</p>

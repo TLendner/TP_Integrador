@@ -21,5 +21,15 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult Mapa()
+    {
+        return View();
+    }
+
+    public IActionResult Chat()
+    {
+        return View();
+    }
     
 }

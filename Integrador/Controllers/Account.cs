@@ -67,7 +67,7 @@ public class Account : Controller
         public IActionResult GuardarUser(string username, string password, string mail, string pregunta)
         {
             BD.AgregarUsuario(username, password, mail, pregunta);
-            return View("Login");
+            return View("Perfil");
         }
 
         [HttpPost]
