@@ -4,7 +4,7 @@ namespace Integrador.Models;
 
 public class BD
 {
-    private static string ConnectionString = @"Server=A-PHZ2-CIDI-50;DataBase=Green Gains;Trusted_Connection=True;";
+    private static string ConnectionString = @"Server=A-PHZ2-CIDI-15;DataBase=Green Gains;Trusted_Connection=True;";
 
     public static void AgregarUsuario(string username, string password, string mail, string pregunta)
     {
@@ -44,6 +44,16 @@ public class BD
             string sql = "UPDATE Usuario SET password = CONVERT(varchar(32), HASHBYTES('md5', @pPassword), 2) WHERE username = @pUsername";
             db.Execute(sql, new { pUsername = username, pPassword = password });
         }
+    }
+
+    public static List<Producto> MostrarProducto()
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM Productos";
+            listaProductos = db.Query<Producto>(sql).ToList();
+        }
+        return listaProductos;
     }
 
 }
