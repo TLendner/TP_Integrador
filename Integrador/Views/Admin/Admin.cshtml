@@ -1,0 +1,88 @@
+<h2>Administrar Productos</h2>
+
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Stock</th>
+        <th>Puntos</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (Producto prod in ViewBag.listaProductos)
+    {
+        <tr>
+            <td>@prod.nombre</td>
+            <td>@prod.stock</td>
+            <td>@prod.puntos</td>
+            <td>
+                @if (prod.imagen != null)
+                {
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="50" />
+                }
+                else
+                {
+                    <span>Sin imagen</span>
+                }
+            </td>
+            <td>
+                <h3>Eliminar Producto</h3>
+                <form method="post" action="/Admin/EliminarProducto">
+                    <input type="hidden" name="idProducto" value="@prod.id_Producto" />
+                    <button type="submit">Eliminar</button>
+                </form>
+
+                <h3>Editar Producto</h3>
+                <form method="post" enctype="multipart/form-data" action="/Admin/EditarProducto">
+                    <input type="hidden" name="idProducto" value="@prod.id_Producto" />
+                    <input type="text" name="nombre" value="@prod.nombre" required />
+                    <input type="number" name="stock" value="@prod.stock" required />
+                    <input type="number" name="puntos" value="@prod.puntos" required />
+                    <input type="file" name="imagen" />
+                    <button type="submit">Editar</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+
+<h3>Agregar Producto</h3>
+<form method="post" enctype="multipart/form-data" action="/Admin/AgregarProducto">
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <input type="text" name="descripcion" placeholder="Descripción" required />
+    <input type="number" name="stock" placeholder="Stock" required />
+    <input type="number" name="puntos" placeholder="Puntos" required />
+    <input type="number" name="id_categoria" placeholder="ID Categoría" required />
+    <input type="number" name="calificacion" placeholder="Calificación" required />
+    <input type="file" name="imagen" />
+    <button type="submit">Agregar</button>
+</form>
+
+
+<h3>Eliminar Categoria</h3>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+    </tr>
+    @foreach (Categoria categoria in ViewBag.listaCategorias)
+    {
+        <tr>
+            <td>@categoria.nombre</td>
+            <td>
+                <form method="post" action="/Admin/EliminarCategoria">
+                    <input type="hidden" name="idCategoria" value="@categoria.id" />
+                    <button type="submit">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+
+
+<h3>Agregar Categoria</h3>
+<form method="post" enctype="multipart/form-data" action="/Admin/AgregarCategoria">
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <button type="submit">Agregar</button>
+</form>
+
+
+

@@ -19,7 +19,7 @@ public class HomeController : Controller
     }
     public IActionResult Tienda()
     {
-        ViewBag.listaProductos = BD.MostrarProducto();
+        ViewBag.listaProductos = BD.MostrarProductos();
         return View();
     }
 

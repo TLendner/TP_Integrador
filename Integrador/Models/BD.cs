@@ -46,7 +46,7 @@ public class BD
         }
     }
 
-    public static List<Producto> MostrarProducto()
+    public static List<Producto> MostrarProductos()
     {
         List<Producto>listaProductos;
         using (SqlConnection db = new SqlConnection(ConnectionString))
@@ -57,4 +57,66 @@ public class BD
         return listaProductos;
     }
 
+    public static void AgregarProducto(string descripcion, string nombre, int stock, int puntos, int id_categoria, int calificacion, byte[]? imagen = null)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "INSERT INTO Productos (descripcion, nombre, stock, puntos, id_categoria, calificacion, imagen) VALUES (@pDesc, @pNombre, @pStock, @pPuntos, @pId_c, @pCalificacion, @pImagen)";
+            db.Execute(sql, new { pDesc = descripcion, pNombre = nombre, pStock = stock, pPuntos = puntos, pId_c = id_categoria, pCalificacion = calificacion, pImagen = imagen});
+        }
+    } 
+
+    public static void EliminarProducto(int idProducto)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "DELETE FROM Productos WHERE id_producto = @pId";
+            db.Execute(sql, new { pId = idProducto });
+        }
+    }
+    public static void EditarProducto(int idProducto, string descripcion, string nombre, int stock, int puntos, int id_categoria, int calificacion, byte[]? imagen)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "UPDATE Productos SET descripcion = @pDesc, nombre = @pNombre, stock = @pStock, puntos = @pPuntos, id_categoria = @pId_c, calificacion = @pCalificacion";
+
+            if (imagen != null)
+            {
+                sql += ", imagen = @pImagen";
+            }
+
+            sql += " WHERE id_producto = @pId";
+
+            db.Execute(sql, new { pId = idProducto, pDesc = descripcion, pNombre = nombre, pStock = stock, pPuntos = puntos, pId_c = id_categoria, pCalificacion = calificacion, pImagen = imagen });
+        }
+    }
+
+    public static List<Categoria> MostrarCategorias()
+    {
+        List<Categoria>listaCategorias;
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM Categorias";
+            listaCategorias = db.Query<Categoria>(sql).ToList();
+        }
+        return listaCategorias;
+    }
+
+    public static void AgregarCategoria(string nombre)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "INSERT INTO Categorias (nombre) VALUES (@pNombre)";
+            db.Execute(sql, new { pNombre = nombre});
+        }
+    } 
+
+    public static void EliminarCategoria(int idCategoria)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "DELETE FROM Categorias WHERE id_categoria = @pId";
+            db.Execute(sql, new { pId = idCategoria });
+        }
+    }
 }
