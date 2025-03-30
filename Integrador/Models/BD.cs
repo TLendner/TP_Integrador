@@ -4,7 +4,7 @@ namespace Integrador.Models;
 
 public class BD
 {
-    private static string ConnectionString = @"Server=A-PHZ2-CIDI-15;DataBase=Green Gains;Trusted_Connection=True;";
+    private static string ConnectionString = @"Server=DESKTOP-TOMI\SQLEXPRESS;DataBase=Green Gains;Trusted_Connection=True;";
 
     public static void AgregarUsuario(string username, string password, string mail, string pregunta)
     {
@@ -48,6 +48,7 @@ public class BD
 
     public static List<Producto> MostrarProducto()
     {
+        List<Producto>listaProductos;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "SELECT * FROM Productos";
