@@ -1,4 +1,23 @@
+@{List<Producto> listaNoStock = new List<Producto>();}
 @foreach(Producto prod in ViewBag.listaProductos)
 {
+    @if(prod.stock>0)
+    {
+
+        <h3>Nombre: @prod.nombre</h3>
+        <h3>Puntos: @prod.puntos</h3>
+        <h3>@prod.calificacion</h3>
+    }
+    else
+    {
+        listaNoStock.Add(prod);
+    }
+    
+}
+@foreach(Producto prod in listaNoStock)
+{
     <h3>Nombre: @prod.nombre</h3>
+    <h3>Sin stock</h3>
+    <h3>Puntos: @prod.puntos</h3>
+    <h3>@prod.calificacion</h3> 
 }
