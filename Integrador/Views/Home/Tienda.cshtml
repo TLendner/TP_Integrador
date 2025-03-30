@@ -7,6 +7,14 @@
         <h3>Nombre: @prod.nombre</h3>
         <h3>Puntos: @prod.puntos</h3>
         <h3>@prod.calificacion</h3>
+        @if (prod.imagen != null && prod.imagen.Length > 0)
+        {
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="150" height="150" />
+        }
+        else
+        {
+            <span>Sin imagen</span>
+        }
     }
     else
     {
@@ -20,6 +28,14 @@
     <h3>Sin stock</h3>
     <h3>Puntos: @prod.puntos</h3>
     <h3>@prod.calificacion</h3> 
+    @if (prod.imagen != null && prod.imagen.Length > 0)
+        {
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="150" height="150" />
+        }
+        else
+        {
+            <span>Sin imagen</span>
+        }
 }
 
 <a href='@Url.Action("Admin","Admin")'>Editar Productos</a>

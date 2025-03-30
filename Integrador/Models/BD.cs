@@ -111,12 +111,14 @@ public class BD
         }
     } 
 
-    public static void EliminarCategoria(int idCategoria)
+    public static void EliminarCategoria(int id)
     {
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "DELETE FROM Categorias WHERE id_categoria = @pId";
-            db.Execute(sql, new { pId = idCategoria });
+            db.Execute(sql, new { pId = id });
         }
     }
+
+    
 }

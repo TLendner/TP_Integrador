@@ -37,6 +37,8 @@
                     <input type="text" name="nombre" value="@prod.nombre" required />
                     <input type="number" name="stock" value="@prod.stock" required />
                     <input type="number" name="puntos" value="@prod.puntos" required />
+                    <input type="number" name="id_categoria" value="@prod.id_categoria" max="ViewBag.listaCategorias.Count() + 1" required />
+                    <input type="number" name="calificacion" value="@prod.calificacion" required />
                     <input type="file" name="imagen" />
                     <button type="submit">Editar</button>
                 </form>
