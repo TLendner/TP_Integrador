@@ -19,10 +19,6 @@
                 {
                     <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="50" />
                 }
-                else
-                {
-                    <span>Sin imagen</span>
-                }
             </td>
             <td>
                 <h3>Eliminar Producto</h3>
@@ -34,7 +30,7 @@
                 <h3>Editar Producto</h3>
                 <form method="post" enctype="multipart/form-data" action="/Admin/EditarProducto">
                     <input type="hidden" name="idProducto" value="@prod.id_Producto" />
-                    <input type="text" name="nombre" value="@prod.nombre" required />
+                    <input type="text" name="nombre"  value="@prod.nombre" required />
                     <input type="number" name="stock" value="@prod.stock" required />
                     <input type="number" name="puntos" value="@prod.puntos" required />
                     <input type="number" name="id_categoria" value="@prod.id_categoria" max="ViewBag.listaCategorias.Count() + 1" required />
@@ -48,10 +44,10 @@
 </table>
 
 <h3>Agregar Producto</h3>
-<form method="post" enctype="multipart/form-data" action="/Admin/AgregarProducto">
+<form method="post" enctype="multipart/form-data" action="/Admin/AgregarProducto" onsubmit=>
     <input type="text" name="nombre" placeholder="Nombre" required />
     <input type="text" name="descripcion" placeholder="Descripción" required />
-    <input type="number" name="stock" placeholder="Stock" required />
+    <input type="number" name="stock" id="num" onkeyup="validarNum()" placeholder="Stock" required />
     <input type="number" name="puntos" placeholder="Puntos" required />
     <input type="number" name="id_categoria" placeholder="ID Categoría" required />
     <input type="number" name="calificacion" placeholder="Calificación" required />
@@ -86,5 +82,5 @@
     <button type="submit">Agregar</button>
 </form>
 
-
+<script src="site.js"></script>
 
