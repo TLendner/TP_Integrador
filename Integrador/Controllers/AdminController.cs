@@ -70,22 +70,23 @@ public class AdminController : Controller
 [HttpPost]
 public IActionResult AgregarPuntosAdmin(int puntos)
 {
-    try
+    // Verificar si hay usuario logueado
+    string username = HttpContext.Session.GetString("username");
+    if (username == null)
     {
-        string username = HttpContext.Session.GetString("username");
-        if (username == null)
-        {
-            return Unauthorized("Usuario no logueado.");
-        }
+        return Unauthorized();
+    }
 
-        BD.AgregarPuntosAdmin(username, puntos);
-        return Ok();
-    }
-    catch (Exception ex)
-    {
-        return StatusCode(500, "Error en la BD: " + ex.Message);
-    }
+    // Obtener puntos actuales del usuario
+    int? puntosActuales = HttpContext.Session.GetInt32("puntos") ?? 0;
+    int nuevosPuntos = puntosActuales.Value + puntos;
+
+    // Actualizar en la base de datos
+    BD.ActualizarPuntosUsuario(username, nuevosPuntos);
+
+    // Actualizar la sesión
+    HttpContext.Session.SetInt32("puntos", nuevosPuntos);
+
+    return Ok();
 }
-
-
 }

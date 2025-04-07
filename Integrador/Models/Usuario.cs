@@ -1,4 +1,5 @@
 public class Usuario{
+    public int id_usuario {get;set;}
     public string username{get;set;}
     public string password {get;set;}
     public string mail {get;set;}
@@ -7,7 +8,8 @@ public class Usuario{
 
 public Usuario(){}
 
-public Usuario(string pUsername, string pPassword, string pMail, int pPuntos, string pPregunta){
+public Usuario(int pId, string pUsername, string pPassword, string pMail, int pPuntos, string pPregunta){
+    id_usuario = pId;
     username = pUsername;
     password = pPassword;
     mail = pMail;

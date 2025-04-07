@@ -17,12 +17,13 @@ public class Account : Controller
     {
         return View();
     }
+
     public IActionResult Perfil()
     {
         return View();
     }
 
-    public IActionResult ValidarUser(string username, string password)
+public IActionResult ValidarUser(string username, string password)
 {
     var usuario = BD.Mostrar(username, password);
 
@@ -33,51 +34,52 @@ public class Account : Controller
     }
     else
     {
-        // Guardamos info en sesión
         HttpContext.Session.SetString("username", usuario.username);
-        HttpContext.Session.SetInt32("puntos", usuario.puntos); // suponiendo que tiene puntos
+        HttpContext.Session.SetInt32("idUsuario", usuario.id_usuario);
+        HttpContext.Session.SetInt32("puntos", usuario.puntos);
 
         return RedirectToAction("Perfil");
     }
 }
 
-        public IActionResult ValidarOlvide(string username, string mail, string pregunta)
-        {
-            var usuario = BD.MostrarOlvide(username, mail, pregunta);
 
-            if (usuario == null)
-            {
-                ViewBag.ErrorMessage = "Dato/s incorrectos";
-                return View("Olvide");
-            }
-            else
-            {
-                ViewBag.User = usuario.username;
-                return View("CambiarContraseña");
-            }
-        }
+    public IActionResult ValidarOlvide(string username, string mail, string pregunta)
+    {
+        var usuario = BD.MostrarOlvide(username, mail, pregunta);
 
-        public IActionResult Registrar()
+        if (usuario == null)
         {
-            return View("Registro");
-        }
-        
-        public IActionResult Olvide()
-        {
+            ViewBag.ErrorMessage = "Dato/s incorrectos";
             return View("Olvide");
         }
-
-        [HttpPost]
-        public IActionResult GuardarUser(string username, string password, string mail, string pregunta)
+        else
         {
-            BD.AgregarUsuario(username, password, mail, pregunta);
-            return View("Perfil");
+            ViewBag.User = usuario.username;
+            return View("CambiarContraseña");
         }
+    }
 
-        [HttpPost]
-        public IActionResult CrearNuevaContraseña(string username, string password)
-        {
-            BD.CambiarPassword(username, password);
-            return View("Login");
-        }    
+    public IActionResult Registrar()
+    {
+        return View("Registro");
+    }
+
+    public IActionResult Olvide()
+    {
+        return View("Olvide");
+    }
+
+    [HttpPost]
+    public IActionResult GuardarUser(string username, string password, string mail, string pregunta)
+    {
+        BD.AgregarUsuario(username, password, mail, pregunta);
+        return View("Perfil");
+    }
+
+    [HttpPost]
+    public IActionResult CrearNuevaContraseña(string username, string password)
+    {
+        BD.CambiarPassword(username, password);
+        return View("Login");
+    }    
 }

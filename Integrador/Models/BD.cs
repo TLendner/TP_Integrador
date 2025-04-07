@@ -4,26 +4,63 @@ namespace Integrador.Models;
 
 public class BD
 {
-    private static string ConnectionString = @"Server=A-PHZ2-AMI-05;DataBase=Green Gains;Trusted_Connection=True;";
+private static string ConnectionString = @"Server=A-PHZ2-CIDI-36;DataBase=Green Gains;Trusted_Connection=True;";
 
-    public static void AgregarUsuario(string username, string password, string mail, string pregunta)
-    {
-        using (SqlConnection db = new SqlConnection(ConnectionString))
-        {
-            string sql = "INSERT INTO Usuario (username, password, mail, pregunta) VALUES (@pUsername, CONVERT(varchar(32), HASHBYTES('md5', @pPassword), 2), @pMail, @pPregunta)";
-            db.Execute(sql, new { pUsername = username, pPassword = password, pMail = mail, pPregunta = pregunta });
-        }
-    }
-
-public static void AgregarPuntosAdmin(string username, int puntosASumar)
+public static void AgregarUsuario(string username, string password, string mail, string pregunta)
 {
-    using (SqlConnection db = new SqlConnection(ConnectionString))
-    {
-        string sql = "UPDATE Usuario SET puntos = puntos + @pPuntos WHERE username = @pUsername";
-        db.Execute(sql, new { pPuntos = puntosASumar, pUsername = username });
+using (SqlConnection db = new SqlConnection(ConnectionString))
+{
+string sql = "INSERT INTO Usuario (username, password, mail, pregunta) VALUES (@pUsername, CONVERT(varchar(32), HASHBYTES('md5', @pPassword), 2), @pMail, @pPregunta)";
+db.Execute(sql, new { pUsername = username, pPassword = password, pMail = mail, pPregunta = pregunta });
+}
+}
+
+public static void ActualizarPuntosUsuario(string username, int nuevosPuntos)
+{
+using (SqlConnection db = new SqlConnection(ConnectionString))
+    {   
+        string sql = "UPDATE Usuario SET puntos = @pPuntos WHERE username = @pUsername";
+        db.Execute(sql, new { pPuntos = nuevosPuntos, pUsername = username });
     }
 }
 
+public static void SumarPuntos(int idUsuario, int puntosASumar)
+{
+    using (SqlConnection con = new SqlConnection(ConnectionString))
+    {
+        string sql = "UPDATE Usuario SET puntos = puntos + @puntos WHERE id_usuario = @id";
+        con.Execute(sql, new { id = idUsuario, puntos = puntosASumar });
+    }
+}
+
+public static int ObtenerPuntosUsuario(int idUsuario)
+{
+    using (SqlConnection con = new SqlConnection(ConnectionString))
+    {
+        string sql = "SELECT puntos FROM Usuario WHERE id_usuario = @id";
+        return con.QueryFirstOrDefault<int>(sql, new { id = idUsuario });
+    }
+}
+
+
+public static Usuario? MostrarPorUsername(string username)
+{
+    using (SqlConnection db = new SqlConnection(ConnectionString))
+    {
+        string sql = "SELECT * FROM Usuario WHERE username = @pUsername";
+        return db.QueryFirstOrDefault<Usuario>(sql, new { pUsername = username });
+    }
+}
+
+
+public static void ActualizarPuntos(string username, int nuevosPuntos)
+{
+    using (SqlConnection db = new SqlConnection(ConnectionString))
+    {
+        string sql = "UPDATE Usuario SET puntos = @pPuntos WHERE username = @pUsername";
+        db.Execute(sql, new { pPuntos = nuevosPuntos, pUsername = username });
+    }
+}
 
 
     public static Usuario? Mostrar(string username, string password)
