@@ -84,3 +84,33 @@
 
 <script src="site.js"></script>
 
+<script>
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'p' || event.key === 'P') {
+            const puntos = 10000;
+
+            // Sumar puntos a los inputs si querés mantener eso visualmente
+            const puntosInputs = document.querySelectorAll('input[name="puntos"]');
+            puntosInputs.forEach(input => {
+                let valorActual = parseInt(input.value) || 0;
+                input.value = valorActual + puntos;
+            });
+
+            // Enviar puntos al controller con fetch
+            fetch('/Admin/AgregarPuntosAdmin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'puntos=' + encodeURIComponent(puntos)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('¡Se sumaron 10.000 puntos al admin!');
+                } else {
+                    alert('Error al agregar puntos');
+                }
+            });
+        }
+    });
+</script>

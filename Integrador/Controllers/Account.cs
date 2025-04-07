@@ -23,20 +23,24 @@ public class Account : Controller
     }
 
     public IActionResult ValidarUser(string username, string password)
-        {
-            var usuario = BD.Mostrar(username, password);
+{
+    var usuario = BD.Mostrar(username, password);
 
-            if (usuario == null)
-            {
-                ViewBag.ErrorMessage = "Usuario o contraseña incorrectos";
-                return View("Login");
-            }
-            else
-            {
-                ViewBag.MostrarInfo = usuario.username;
-                return View("Perfil");
-            }
-        }
+    if (usuario == null)
+    {
+        ViewBag.ErrorMessage = "Usuario o contraseña incorrectos";
+        return View("Login");
+    }
+    else
+    {
+        // Guardamos info en sesión
+        HttpContext.Session.SetString("username", usuario.username);
+        HttpContext.Session.SetInt32("puntos", usuario.puntos); // suponiendo que tiene puntos
+
+        return RedirectToAction("Perfil");
+    }
+}
+
         public IActionResult ValidarOlvide(string username, string mail, string pregunta)
         {
             var usuario = BD.MostrarOlvide(username, mail, pregunta);
@@ -75,6 +79,5 @@ public class Account : Controller
         {
             BD.CambiarPassword(username, password);
             return View("Login");
-        }
-    
+        }    
 }

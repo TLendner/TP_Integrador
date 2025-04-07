@@ -67,4 +67,25 @@ public class AdminController : Controller
         return RedirectToAction("Tienda", "Home");
     }
 
+[HttpPost]
+public IActionResult AgregarPuntosAdmin(int puntos)
+{
+    try
+    {
+        string username = HttpContext.Session.GetString("username");
+        if (username == null)
+        {
+            return Unauthorized("Usuario no logueado.");
+        }
+
+        BD.AgregarPuntosAdmin(username, puntos);
+        return Ok();
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, "Error en la BD: " + ex.Message);
+    }
+}
+
+
 }

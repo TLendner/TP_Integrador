@@ -6,19 +6,16 @@
 
 html, body {
   overflow-x: hidden;
-}
-
-body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(180deg, #63925B 0%, #A1CDA1 20%, #B9E4BC 60%, #DDEED6 95%);
   color: #fff;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 header {
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 1rem;
   background-color: transparent;
 }
 
@@ -26,6 +23,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -35,18 +33,19 @@ header {
 }
 
 .logo img {
-  height: 70px;
+  height: 50px;
 }
 
 .logo span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
 }
 
 .nav-links {
   display: flex;
-  gap: 20rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -57,31 +56,26 @@ header {
 }
 
 .profile-icon {
-  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 
 .profile-icon a {
   text-decoration: none;
-}
-
-.profile-icon {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; 
-  font-size: 1.8rem;
-  color: #fff;
+  color: inherit;
 }
 
 .hero {
   text-align: center;
-  padding: 6rem 1rem 4rem;
+  padding: 4rem 1rem 3rem;
   flex-grow: 1;
 }
 
 .hero h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: bold;
   font-style: italic;
   margin-bottom: 0.5rem;
@@ -90,7 +84,7 @@ header {
 
 .hero h2 {
   font-family: 'Meera Inimai', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #fff;
 }
@@ -104,7 +98,8 @@ header {
 }
 
 .app-image {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 10px;
   margin-bottom: 1.5rem;
 }
@@ -129,11 +124,27 @@ footer {
   font-size: 1rem;
 }
 
+.footer-nav {
+  margin-top: 1rem;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.7rem;
+  font-size: 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
 /* Modal Styles */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1050;
   left: 0;
   top: 0;
   width: 100%;
@@ -147,7 +158,8 @@ footer {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   text-align: center;
   border-radius: 10px;
 }
@@ -166,21 +178,18 @@ footer {
   cursor: pointer;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
+/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1000;
   border-radius: 8px;
   overflow: hidden;
 }
+
 .dropdown-content a {
   color: #333;
   padding: 12px 16px;
@@ -197,19 +206,27 @@ footer {
   display: block;
 }
 
-.footer-nav {
-  margin-top: 1rem;
+/* Responsive text sizes */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    gap: 4rem;
+  }
 }
 
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 0.7rem;
-  font-size: 1rem;
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 6rem;
+  }
 }
-
-footer p {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-}
-

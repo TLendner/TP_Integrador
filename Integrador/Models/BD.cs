@@ -4,7 +4,7 @@ namespace Integrador.Models;
 
 public class BD
 {
-    private static string ConnectionString = @"Server=A-PHZ2-CIDI-36;DataBase=Green Gains;Trusted_Connection=True;";
+    private static string ConnectionString = @"Server=A-PHZ2-AMI-05;DataBase=Green Gains;Trusted_Connection=True;";
 
     public static void AgregarUsuario(string username, string password, string mail, string pregunta)
     {
@@ -14,6 +14,17 @@ public class BD
             db.Execute(sql, new { pUsername = username, pPassword = password, pMail = mail, pPregunta = pregunta });
         }
     }
+
+public static void AgregarPuntosAdmin(string username, int puntosASumar)
+{
+    using (SqlConnection db = new SqlConnection(ConnectionString))
+    {
+        string sql = "UPDATE Usuario SET puntos = puntos + @pPuntos WHERE username = @pUsername";
+        db.Execute(sql, new { pPuntos = puntosASumar, pUsername = username });
+    }
+}
+
+
 
     public static Usuario? Mostrar(string username, string password)
     {
