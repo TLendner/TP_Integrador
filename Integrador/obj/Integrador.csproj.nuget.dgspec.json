@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tp\\TP_Integrador\\Integrador\\Integrador.csproj": {}
+    "C:\\gg\\TP_Integrador\\Integrador\\Integrador.csproj": {}
   },
   "projects": {
-    "C:\\tp\\TP_Integrador\\Integrador\\Integrador.csproj": {
+    "C:\\gg\\TP_Integrador\\Integrador\\Integrador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tp\\TP_Integrador\\Integrador\\Integrador.csproj",
+        "projectUniqueName": "C:\\gg\\TP_Integrador\\Integrador\\Integrador.csproj",
         "projectName": "Integrador",
-        "projectPath": "C:\\tp\\TP_Integrador\\Integrador\\Integrador.csproj",
+        "projectPath": "C:\\gg\\TP_Integrador\\Integrador\\Integrador.csproj",
         "packagesPath": "C:\\Users\\48591419\\.nuget\\packages\\",
-        "outputPath": "C:\\tp\\TP_Integrador\\Integrador\\obj\\",
+        "outputPath": "C:\\gg\\TP_Integrador\\Integrador\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

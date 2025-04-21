@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e68jFtdLQgbRPzaEK6yGxBWkQjrE1O/tGQvJmBC30bA=",
+  "Hash": "I5gZ5FDXezuj1MuwoB8Ix0UHi2/X4PQqF0Sd3eU0Ygo=",
   "Source": "Integrador",
   "BasePath": "_content/Integrador",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Integrador\\wwwroot",
       "Source": "Integrador",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\css\\Account.css",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\css\\Account.css",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "css/Account.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Account.css"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\css\\Home.css",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\css\\Home.css",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "css/Home.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\favicon.ico",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\favicon.ico",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\img\\app-screenshot.png",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\img\\app-screenshot.png",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "img/app-screenshot.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\img\\app-screenshot.png"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\img\\logo.png",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\img\\puntos.png",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\img\\puntos.png",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "img/puntos.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\img\\puntos.png"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\js\\site.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\js\\site.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Integrador",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\tp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "ContentRoot": "C:\\gg\\TP_Integrador\\Integrador\\wwwroot\\",
       "BasePath": "_content/Integrador",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

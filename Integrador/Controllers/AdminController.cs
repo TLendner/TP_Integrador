@@ -67,6 +67,7 @@ public class AdminController : Controller
         return RedirectToAction("Tienda", "Home");
     }
 
+
 [HttpPost]
 public IActionResult AgregarPuntosAdmin(int puntos)
 {
@@ -87,6 +88,8 @@ public IActionResult AgregarPuntosAdmin(int puntos)
     // Actualizar la sesión
     HttpContext.Session.SetInt32("puntos", nuevosPuntos);
 
-    return Ok();
+    // 💡 Devolvemos el nuevo valor como texto plano
+    return Content(nuevosPuntos.ToString());
 }
 }
+

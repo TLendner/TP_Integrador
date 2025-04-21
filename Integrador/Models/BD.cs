@@ -105,7 +105,7 @@ public static void ActualizarPuntos(string username, int nuevosPuntos)
         return listaProductos;
     }
 
-    public static void AgregarProducto(string descripcion, string nombre, int stock, int puntos, int id_categoria, int calificacion, byte[]? imagen = null)
+    public static void AgregarProducto(string? descripcion, string nombre, int stock, int puntos, int id_categoria, int calificacion, byte[]? imagen = null)
     {
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {

@@ -46,7 +46,7 @@
 <h3>Agregar Producto</h3>
 <form method="post" enctype="multipart/form-data" action="/Admin/AgregarProducto">
     <input type="text" name="nombre" placeholder="Nombre" required />
-    <input type="text" name="descripcion" placeholder="Descripción" required />
+    <input type="text" name="descripcion" placeholder="Descripción" />
     <input type="number" name="stock" id="num" onkeyup="validarNum()" placeholder="Stock" required />
     <input type="number" name="puntos" placeholder="Puntos" required />
     <input type="number" name="id_categoria" placeholder="ID Categoría" required />
@@ -66,7 +66,7 @@
             <td>@categoria.nombre</td>
             <td>
                 <form method="post" action="/Admin/EliminarCategoria">
-                    <input type="hidden" name="idCategoria" value="@categoria.id" />
+                    <input type="hidden" name="idCategoria" value="@categoria.id_categoria" />
                     <button type="submit">Eliminar</button>
                 </form>
             </td>
