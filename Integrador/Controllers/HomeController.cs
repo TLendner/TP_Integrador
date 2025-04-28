@@ -19,7 +19,7 @@ public class HomeController : Controller
     }
     public IActionResult Tienda()
     {
-        ViewBag.AdminUser = Usuario.MostrarAdmin();
+        //ViewBag.AdminUser = Usuario.MostrarAdmin();
         ViewBag.listaProductos = BD.MostrarProductos();
         return View();
     }

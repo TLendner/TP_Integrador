@@ -47,7 +47,18 @@
                     <a href='@Url.Action("Login","Account")'>👤</a>
                 }
             </div>
-        </div>
+        </div><!-- En el archivo _Layout.cshtml -->
+<div class="navbar-right">
+    @if (Context.Session.GetString("username") != null)
+    {
+        <span>Bienvenido, @Context.Session.GetString("username")</span>
+    }
+    else
+    {
+        <span>Invitado</span>
+    }
+</div>
+
     </header>
 
     <main role="main">

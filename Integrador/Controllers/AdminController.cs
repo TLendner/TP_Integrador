@@ -67,7 +67,7 @@ public class AdminController : Controller
         return RedirectToAction("Tienda", "Home");
     }
 
-
+/*
 [HttpPost]
 public IActionResult AgregarPuntosAdmin(int puntos)
 {
@@ -91,5 +91,6 @@ public IActionResult AgregarPuntosAdmin(int puntos)
     // 💡 Devolvemos el nuevo valor como texto plano
     return Content(nuevosPuntos.ToString());
 }
+*/
 }
 

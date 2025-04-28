@@ -37,7 +37,6 @@ public IActionResult ValidarUser(string username, string password)
         HttpContext.Session.SetString("username", usuario.username);
         HttpContext.Session.SetInt32("idUsuario", usuario.id_usuario);
         HttpContext.Session.SetInt32("puntos", usuario.puntos);
-
         return RedirectToAction("Perfil");
     }
 }
