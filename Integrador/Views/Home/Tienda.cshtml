@@ -4,15 +4,22 @@
     List<Producto> listaNoStock = new List<Producto>();
 }
 
+@if(ViewBag.Mensaje != null)
+{   
+    <script>alert(@ViewBag.Mensaje)</script>
+}
+
+
 <section class="tienda-container">
-    <h1 class="tienda-titulo">Tienda de Productos</h1>
 
     <div class="productos-grid">
         @foreach(Producto prod in ViewBag.listaProductos)
         {
             if (prod.stock > 0)
             {
+                <a href="@Url.Action("Producto", "Home", new { id = prod.id_Producto})" class="producto-link">
                 <div class="producto-card">
+                    
                     <h3 class="producto-nombre">@prod.nombre</h3>
                     <p class="producto-puntos">🎯 @prod.puntos puntos</p>
                     <p class="producto-calificacion">👍 @prod.calificacion</p>
@@ -26,6 +33,7 @@
                         <span class="producto-sin-imagen">Sin imagen</span>
                     }
                 </div>
+                </a>
             }
             else
             {
@@ -35,6 +43,7 @@
 
         @foreach(Producto prod in listaNoStock)
         {
+            <a href="@Url.Action("Producto", "Home", new { id = prod.id_Producto})" class="producto-link">
             <div class="producto-card sin-stock">
                 <h3 class="producto-nombre">@prod.nombre</h3>
                 <p class="producto-stock">🚫 Sin stock</p>
@@ -50,8 +59,10 @@
                     <span class="producto-sin-imagen">Sin imagen</span>
                 }
             </div>
+            </a>
         }
     </div>
+    
 
     @if(ViewBag.Admin == 1)
     {

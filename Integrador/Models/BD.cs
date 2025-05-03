@@ -104,6 +104,14 @@ public static void ActualizarPuntos(string username, int nuevosPuntos)
         }
         return listaProductos;
     }
+    public static Producto? MostrarUnProducto(int id)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM Productos WHERE id_producto = @pid_Producto";
+            return db.QueryFirstOrDefault<Producto>(sql, new { pid_Producto = id });
+        }
+    }
 
     public static void AgregarProducto(string? descripcion, string nombre, int stock, int puntos, int id_categoria, int calificacion, byte[]? imagen = null)
     {
@@ -168,5 +176,22 @@ public static void ActualizarPuntos(string username, int nuevosPuntos)
         }
     }
 
+    public static void RestarStock(int id)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "UPDATE Productos SET stock = stock-1 WHERE id_producto = @pid";
+            db.Execute(sql, new { pid = id });
+        }
+    }
+    
+    public static void RestarPuntos(int id, int puntosProd)
+    {
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "UPDATE Usuario SET puntos = puntos-@pPuntosProd WHERE id_usuario = @pid";
+            db.Execute(sql, new { pPuntosProd = puntosProd, pid = id });
+        }
+    }
     
 }

@@ -1,24 +1,24 @@
 .tienda-container {
     padding: 3rem 1rem;
     flex-grow: 1;
-  }
-  
-  .tienda-titulo {
+}
+
+.tienda-titulo {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
     color: #fff;
     font-weight: bold;
-  }
-  
-  .productos-grid {
+}
+
+.productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
-  }
-  
-  .producto-card {
+}
+
+.producto-card {
     background-color: #ffffff;
     color: #2A3920;
     border-radius: 10px;
@@ -27,51 +27,57 @@
     text-align: center;
     transition: transform 0.2s ease-in-out;
     animation: fadeInUp 0.6s;
-  }
-  
-  .producto-card:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* todas las cards del mismo alto */
+}
+
+.producto-card:hover {
     transform: scale(1.03);
-  }
-  
-  .producto-card.sin-stock {
+}
+
+.producto-card.sin-stock {
     opacity: 0.6;
     background-color: #eeeeee;
-  }
-  
-  .producto-nombre {
+}
+
+.producto-nombre {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-  }
-  
-  .producto-puntos,
-  .producto-calificacion,
-  .producto-stock {
+}
+
+.producto-puntos,
+.producto-calificacion,
+.producto-stock {
     font-size: 1rem;
     margin: 0.3rem 0;
-  }
-  
-  .producto-imagen {
+}
+
+.producto-imagen {
     margin-top: 1rem;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
     border: 1px solid #ccc;
-  }
-  
-  .producto-sin-imagen {
+    flex-shrink: 0;
+}
+
+.producto-sin-imagen {
     display: inline-block;
     margin-top: 1rem;
     font-style: italic;
     color: #888;
-  }
-  
-  .admin-link {
+}
+
+.admin-link {
     text-align: center;
     margin-top: 3rem;
-  }
-  
-  .editar-btn {
+}
+
+.editar-btn {
     background-color: #5F946A;
     color: white;
     padding: 12px 24px;
@@ -79,9 +85,14 @@
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
-  
-  .editar-btn:hover {
+}
+
+.editar-btn:hover {
     background-color: #4CAF50;
-  }
-  
+}
+
+.producto-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

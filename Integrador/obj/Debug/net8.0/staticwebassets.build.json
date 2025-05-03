@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D6BDhG48Jr7hapFvqgaOyqB5eLVOaDBCKK+vonBFMQ8=",
+  "Hash": "aFvgmnf3VhMFajGvTVyiNJ9Vyzu8HkY+NbgPnAfmpNA=",
   "Source": "Integrador",
   "BasePath": "_content/Integrador",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
+    },
+    {
+      "Identity": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\wwwroot\\css\\Producto.css",
+      "SourceId": "Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\wwwroot\\",
+      "BasePath": "_content/Integrador",
+      "RelativePath": "css/Producto.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Producto.css"
     },
     {
       "Identity": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\wwwroot\\css\\tienda.css",

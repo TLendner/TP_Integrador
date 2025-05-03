@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="~/css/Producto.css" />
+@{
+    ViewBag.Title = ViewBag.Producto.nombre;
+}
+<a href="@Url.Action("Tienda", "Home")" class="tienda-regresar" title="Volver a la tienda">← Volver</a>
+
+<div class="producto-detalle-container">
+    <div class="producto-detalle-card">
+        <h1 class="producto-nombre">@ViewBag.Producto.nombre</h1>
+        @if(ViewBag.Producto.descripcion != null)
+        {
+            <p class="producto-descripcion">@ViewBag.Producto.descripcion</p>
+        }
+
+        @if (ViewBag.Producto.imagen != null && ViewBag.Producto.imagen.Length > 0)
+        {
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(ViewBag.Producto.imagen)" class="producto-imagen-detalle" />
+        }
+
+        <div class="producto-info">
+            <p class="producto-calificacion">⭐ @ViewBag.Producto.calificacion</p>
+            <p class="producto-puntos">🍃 @ViewBag.Producto.puntos puntos</p>
+        </div>
+        
+        @if(ViewBag.Producto.stock > 0)
+        {
+            <div class="producto-acciones">
+                <button onclick="location.href='@Url.Action("Comprar", "Home", new { id = ViewBag.Producto.id_Producto, puntos = ViewBag.Producto.puntos  })'" class="btn-comprar">Comprar</button>
+            </div>
+        }
+        
+    </div>
+</div>

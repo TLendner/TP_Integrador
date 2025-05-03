@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Home.css"
     },
     {
+      "Id": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\wwwroot\\css\\Producto.css",
+      "PackagePath": "staticwebassets\\css\\Producto.css"
+    },
+    {
       "Id": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\wwwroot\\css\\admin.css",
       "PackagePath": "staticwebassets\\css\\admin.css"
     },

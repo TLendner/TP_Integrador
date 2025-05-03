@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Integrador.Models;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 
 namespace Integrador.Controllers;
 
@@ -21,7 +22,17 @@ public class HomeController : Controller
     {
         ViewBag.Admin = HttpContext.Session.GetInt32("admin");
         ViewBag.listaProductos = BD.MostrarProductos();
-
+        return View();
+    }
+    public IActionResult Producto(int id, string ? mensaje)
+    {
+        if(HttpContext.Session.GetString("username") == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+        Producto prod = BD.MostrarUnProducto(id);
+        ViewBag.Producto = prod;
+        ViewBag.Mensaje = mensaje;
         return View();
     }
 
@@ -35,4 +46,14 @@ public class HomeController : Controller
         return View();
     }
     
+    public IActionResult Comprar(int id, int puntos)
+    {
+        if(HttpContext.Session.GetInt32("puntos") < puntos)
+        {
+            return RedirectToAction("Tienda", new ("Puntos insuficientes") );
+        }
+        BD.RestarStock(id);
+        BD.RestarPuntos(HttpContext.Session.GetInt32("idUsuario").Value, puntos);
+        return RedirectToAction("Tienda");
+    }
 }
