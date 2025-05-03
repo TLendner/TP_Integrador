@@ -19,8 +19,9 @@ public class HomeController : Controller
     }
     public IActionResult Tienda()
     {
-        //ViewBag.AdminUser = Usuario.MostrarAdmin();
+        ViewBag.Admin = HttpContext.Session.GetInt32("admin");
         ViewBag.listaProductos = BD.MostrarProductos();
+
         return View();
     }
 

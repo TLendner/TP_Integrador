@@ -1,2 +1,15 @@
-    <link rel="stylesheet" href="~/css/Account.css" asp-append-version="true" />
-    
+<link rel="stylesheet" href="~/css/Account.css" asp-append-version="true" />
+<form asp-controller="Account" asp-action="Logout" method="post">
+    <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+</form>
+<h1>Perfil de Usuario</h1>
+@* <div class="profile-info">
+    <h2>@Model.Nombre</h2>
+    <p>Email: @Model.Email</p>
+    <p>Teléfono: @Model.Telefono</p>
+</div>
+ 
+<div class="profile-actions">
+    <a href="@Url.Action("Edit", "Account")" class="btn btn-primary">Editar Perfil</a>
+</div>
+*@

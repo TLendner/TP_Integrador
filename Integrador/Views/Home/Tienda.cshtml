@@ -1,41 +1,62 @@
-@{List<Producto> listaNoStock = new List<Producto>();}
-@foreach(Producto prod in ViewBag.listaProductos)
-{
-    @if(prod.stock>0)
-    {
+<link rel="stylesheet" href="~/css/tienda.css" />
 
-        <h3>Nombre: @prod.nombre</h3>
-        <h3>Puntos: @prod.puntos</h3>
-        <h3>@prod.calificacion</h3>
-        @if (prod.imagen != null && prod.imagen.Length > 0)
-        {
-            <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="150" height="150" />
-        }
-        else
-        {
-            <span>Sin imagen</span>
-        }
-    }
-    else
-    {
-        listaNoStock.Add(prod);
-    }
-    
-}
-@foreach(Producto prod in listaNoStock)
-{
-    <h3>Nombre: @prod.nombre</h3>
-    <h3>Sin stock</h3>
-    <h3>Puntos: @prod.puntos</h3>
-    <h3>@prod.calificacion</h3> 
-    @if (prod.imagen != null && prod.imagen.Length > 0)
-        {
-            <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" width="150" height="150" />
-        }
-        else
-        {
-            <span>Sin imagen</span>
-        }
+@{
+    List<Producto> listaNoStock = new List<Producto>();
 }
 
-<a href='@Url.Action("Admin","Admin")'>Editar Productos</a>
+<section class="tienda-container">
+    <h1 class="tienda-titulo">Tienda de Productos</h1>
+
+    <div class="productos-grid">
+        @foreach(Producto prod in ViewBag.listaProductos)
+        {
+            if (prod.stock > 0)
+            {
+                <div class="producto-card">
+                    <h3 class="producto-nombre">@prod.nombre</h3>
+                    <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                    <p class="producto-calificacion">👍 @prod.calificacion</p>
+
+                    @if (prod.imagen != null && prod.imagen.Length > 0)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
+                    }
+                    else
+                    {
+                        <span class="producto-sin-imagen">Sin imagen</span>
+                    }
+                </div>
+            }
+            else
+            {
+                listaNoStock.Add(prod);
+            }
+        }
+
+        @foreach(Producto prod in listaNoStock)
+        {
+            <div class="producto-card sin-stock">
+                <h3 class="producto-nombre">@prod.nombre</h3>
+                <p class="producto-stock">🚫 Sin stock</p>
+                <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                <p class="producto-calificacion">⭐ @prod.calificacion</p>
+
+                @if (prod.imagen != null && prod.imagen.Length > 0)
+                {
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
+                }
+                else
+                {
+                    <span class="producto-sin-imagen">Sin imagen</span>
+                }
+            </div>
+        }
+    </div>
+
+    @if(ViewBag.Admin == 1)
+    {
+        <div class="admin-link">
+            <a class="editar-btn" href='@Url.Action("Admin", "Admin")'>Editar Productos</a>
+        </div>
+    }
+</section>

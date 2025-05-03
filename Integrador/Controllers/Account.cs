@@ -13,10 +13,15 @@ public class Account : Controller
         _logger = logger;
     }
 
-    public IActionResult Login()
+   public IActionResult Login()
+{
+    if (HttpContext.Session.GetString("username") != null)
     {
-        return View();
+        return RedirectToAction("Perfil");
     }
+
+    return View();
+}
 
     public IActionResult Perfil()
     {
@@ -37,8 +42,15 @@ public IActionResult ValidarUser(string username, string password)
         HttpContext.Session.SetString("username", usuario.username);
         HttpContext.Session.SetInt32("idUsuario", usuario.id_usuario);
         HttpContext.Session.SetInt32("puntos", usuario.puntos);
+        HttpContext.Session.SetInt32("admin", usuario.MostrarAdmin() ? 1 : 0);
+
         return RedirectToAction("Perfil");
     }
+}
+public IActionResult Logout()
+{
+    HttpContext.Session.Clear();
+    return RedirectToAction("Login");
 }
 
 
