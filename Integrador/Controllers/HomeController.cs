@@ -18,13 +18,30 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Tienda()
+
+public IActionResult Tienda(string orden = "", string? mensaje = null)
+{
+    ViewBag.Admin = HttpContext.Session.GetInt32("admin");
+
+    List<Producto> productos = BD.MostrarProductos();
+
+    if (orden == "menor")
     {
-        ViewBag.Admin = HttpContext.Session.GetInt32("admin");
-        ViewBag.listaProductos = BD.MostrarProductos();
-        return View();
+        productos = productos.OrderBy(p => p.puntos).ToList();
     }
-    public IActionResult Producto(int id, string ? mensaje)
+    else if (orden == "mayor")
+    {
+        productos = productos.OrderByDescending(p => p.puntos).ToList();
+    }
+
+    ViewBag.listaProductos = productos;
+    ViewBag.OrdenSeleccionado = orden;
+    ViewBag.Mensaje = mensaje;
+    return View();
+}
+
+
+    public IActionResult Producto(int id)
     {
         if(HttpContext.Session.GetString("username") == null)
         {
@@ -32,7 +49,7 @@ public class HomeController : Controller
         }
         Producto prod = BD.MostrarUnProducto(id);
         ViewBag.Producto = prod;
-        ViewBag.Mensaje = mensaje;
+
         return View();
     }
 
@@ -50,7 +67,7 @@ public class HomeController : Controller
     {
         if(HttpContext.Session.GetInt32("puntos") < puntos)
         {
-            return RedirectToAction("Tienda", new ("Puntos insuficientes") );
+            return RedirectToAction("Tienda", new { mensaje = "Puntos insuficientes" });
         }
         BD.RestarStock(id);
         BD.RestarPuntos(HttpContext.Session.GetInt32("idUsuario").Value, puntos);

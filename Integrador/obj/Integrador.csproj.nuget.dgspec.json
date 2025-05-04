@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\Integrador.csproj": {}
+    "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\Integrador.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\Integrador.csproj": {
+    "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\Integrador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\Integrador.csproj",
+        "projectUniqueName": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\Integrador.csproj",
         "projectName": "Integrador",
-        "projectPath": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\Integrador.csproj",
+        "projectPath": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\Integrador.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tomas\\Downloads\\tpgg\\TP_Integrador\\Integrador\\obj\\",
+        "outputPath": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -96,3 +96,14 @@
     color: inherit;
     display: block;
 }
+.filtros-tienda {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtros-tienda select {
+    padding: 5px;
+    border-radius: 5px;
+}

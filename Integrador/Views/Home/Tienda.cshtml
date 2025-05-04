@@ -6,11 +6,20 @@
 
 @if(ViewBag.Mensaje != null)
 {   
-    <script>alert(@ViewBag.Mensaje)</script>
+    <script>alert("@ViewBag.Mensaje")</script>
 }
 
-
 <section class="tienda-container">
+
+    <!-- Filtros de orden -->
+    <form method="get" asp-action="Tienda" class="filtros-tienda">    
+        <select id="orden" name="orden" onchange="this.form.submit()">
+            <option value="">Filtros</option>
+            <option value="menor" selected="@(ViewBag.OrdenSeleccionado == "menor")">Menor a mayor</option>
+            <option value="mayor" selected="@(ViewBag.OrdenSeleccionado == "mayor")">Mayor a menor</option>
+
+        </select>
+    </form>
 
     <div class="productos-grid">
         @foreach(Producto prod in ViewBag.listaProductos)
@@ -18,21 +27,20 @@
             if (prod.stock > 0)
             {
                 <a href="@Url.Action("Producto", "Home", new { id = prod.id_Producto})" class="producto-link">
-                <div class="producto-card">
-                    
-                    <h3 class="producto-nombre">@prod.nombre</h3>
-                    <p class="producto-puntos">🎯 @prod.puntos puntos</p>
-                    <p class="producto-calificacion">👍 @prod.calificacion</p>
+                    <div class="producto-card">
+                        <h3 class="producto-nombre">@prod.nombre</h3>
+                        <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                        <p class="producto-calificacion">👍 @prod.calificacion</p>
 
-                    @if (prod.imagen != null && prod.imagen.Length > 0)
-                    {
-                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
-                    }
-                    else
-                    {
-                        <span class="producto-sin-imagen">Sin imagen</span>
-                    }
-                </div>
+                        @if (prod.imagen != null && prod.imagen.Length > 0)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
+                        }
+                        else
+                        {
+                            <span class="producto-sin-imagen">Sin imagen</span>
+                        }
+                    </div>
                 </a>
             }
             else
@@ -44,25 +52,24 @@
         @foreach(Producto prod in listaNoStock)
         {
             <a href="@Url.Action("Producto", "Home", new { id = prod.id_Producto})" class="producto-link">
-            <div class="producto-card sin-stock">
-                <h3 class="producto-nombre">@prod.nombre</h3>
-                <p class="producto-stock">🚫 Sin stock</p>
-                <p class="producto-puntos">🎯 @prod.puntos puntos</p>
-                <p class="producto-calificacion">⭐ @prod.calificacion</p>
+                <div class="producto-card sin-stock">
+                    <h3 class="producto-nombre">@prod.nombre</h3>
+                    <p class="producto-stock">🚫 Sin stock</p>
+                    <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                    <p class="producto-calificacion">⭐ @prod.calificacion</p>
 
-                @if (prod.imagen != null && prod.imagen.Length > 0)
-                {
-                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
-                }
-                else
-                {
-                    <span class="producto-sin-imagen">Sin imagen</span>
-                }
-            </div>
+                    @if (prod.imagen != null && prod.imagen.Length > 0)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(prod.imagen)" class="producto-imagen" />
+                    }
+                    else
+                    {
+                        <span class="producto-sin-imagen">Sin imagen</span>
+                    }
+                </div>
             </a>
         }
     </div>
-    
 
     @if(ViewBag.Admin == 1)
     {
