@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\admin.css"
     },
     {
+      "Id": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\wwwroot\\css\\perfil.css",
+      "PackagePath": "staticwebassets\\css\\perfil.css"
+    },
+    {
       "Id": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\wwwroot\\css\\tienda.css",
       "PackagePath": "staticwebassets\\css\\tienda.css"
     },

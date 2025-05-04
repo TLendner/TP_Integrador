@@ -1,5 +1,20 @@
-<link rel="stylesheet" href="~/css/Account.css" asp-append-version="true" />
-<form asp-controller="Account" asp-action="Logout" method="post">
-    <button type="submit" class="btn btn-danger">Cerrar sesión</button>
-</form>
-<h1>Perfil de Usuario</h1>
+@{
+    ViewData["Title"] = "Perfil";
+    string username = Context.Session.GetString("username");
+    int? puntos = Context.Session.GetInt32("puntos");
+}
+
+<link rel="stylesheet" href="~/css/perfil.css" asp-append-version="true" />
+
+<section class="perfil-container">
+    <h1>Perfil de Usuario</h1>
+
+    <div class="perfil-info">
+        <p><strong>Nombre de usuario:</strong> @username</p>
+        <p><strong>Puntos disponibles:</strong> 🍃 @puntos</p>
+    </div>
+
+    <form asp-controller="Account" asp-action="Logout" method="post">
+        <button type="submit" class="btn-cerrar-sesion">Cerrar sesión</button>
+    </form>
+</section>

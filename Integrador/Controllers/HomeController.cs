@@ -22,7 +22,6 @@ public class HomeController : Controller
 public IActionResult Tienda(string orden = "", string? mensaje = null)
 {
     ViewBag.Admin = HttpContext.Session.GetInt32("admin");
-
     List<Producto> productos = BD.MostrarProductos();
 
     if (orden == "menor")

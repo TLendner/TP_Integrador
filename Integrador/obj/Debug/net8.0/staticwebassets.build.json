@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UJwvGNygn6ypsXbhttdX8tBQfTgw2Rq9MOwY0Xi0E+A=",
+  "Hash": "saUlPiM7aNfecBFvFY/kOAlhuD88/6wvKNH25PqSOuo=",
   "Source": "Integrador",
   "BasePath": "_content/Integrador",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Home.css"
+    },
+    {
+      "Identity": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\wwwroot\\css\\perfil.css",
+      "SourceId": "Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\wwwroot\\",
+      "BasePath": "_content/Integrador",
+      "RelativePath": "css/perfil.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\perfil.css"
     },
     {
       "Identity": "C:\\Users\\Tomas\\Downloads\\ttttpppp\\TP_Integrador\\Integrador\\wwwroot\\css\\Producto.css",

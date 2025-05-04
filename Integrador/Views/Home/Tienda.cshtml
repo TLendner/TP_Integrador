@@ -29,7 +29,7 @@
                 <a href="@Url.Action("Producto", "Home", new { id = prod.id_Producto})" class="producto-link">
                     <div class="producto-card">
                         <h3 class="producto-nombre">@prod.nombre</h3>
-                        <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                        <p class="producto-puntos">🍃 @prod.puntos puntos</p>
                         <p class="producto-calificacion">👍 @prod.calificacion</p>
 
                         @if (prod.imagen != null && prod.imagen.Length > 0)
@@ -55,7 +55,7 @@
                 <div class="producto-card sin-stock">
                     <h3 class="producto-nombre">@prod.nombre</h3>
                     <p class="producto-stock">🚫 Sin stock</p>
-                    <p class="producto-puntos">🎯 @prod.puntos puntos</p>
+                    <p class="producto-puntos">🍃 @prod.puntos puntos</p>
                     <p class="producto-calificacion">⭐ @prod.calificacion</p>
 
                     @if (prod.imagen != null && prod.imagen.Length > 0)
